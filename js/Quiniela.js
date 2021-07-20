@@ -237,14 +237,7 @@ $("#enviarWhatsapp").click(function(){
         alert('Debes llenar las casillas');
     } else {
 
-        axios.post('/enviar_Respuesta', {
-                Nombre: Nombre,
-                QT:QT,
-                RespuestaPartidos : RespuestaPartidos
-        })
-        .then(function (response){
 
-            if(response.data == 'Exito') {
             alert('Tu apuesta ha sido exitoso, por favor comunicas con un administrador para que le depositas.');
             console.log(RespuestaApuesta);
             borrarLEV();
@@ -252,13 +245,6 @@ $("#enviarWhatsapp").click(function(){
             window.open( baseURL + RespuestaApuesta + ' ' +Nombre,"_blank");
 
 
-             } else {
-                 alert('Ha fallido al servidor, un favor actualizas de nuevo y llenas las casillas.')
-             }
-        })
-        .catch(function(error){
-            console.log(error);
-        })
     }
 
 
