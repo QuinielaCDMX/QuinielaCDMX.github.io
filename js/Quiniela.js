@@ -16,7 +16,7 @@ $(document).ready(function() {
         L5=0,E5=0,V5=0,L6=0,E6=0,V6=0,L7=0,E7=0,V7=0,L8=0,E8=0,V8=0, L9=0, E9=0, V9=0, L10=0, E10=0, V10=0,
         Q1=0, Q2=0, Q3=0, Q4=0, Q5=0, Q6=0, Q7=0, Q8=0, Q9=0, Q10=0;
 
-        var RespuestaApuesta = '', Nombre='';
+        var RespuestaApuesta = '', Nombre='', CostoTotal=0;
 
         function QuinielaTotal () {
             Q1 = L1+E1+V1;
@@ -30,7 +30,7 @@ $(document).ready(function() {
             Q9 = L9+E9+V9;
             Q10 = L10+E10+V10;
 
-            let CostoTotal = 0;
+            CostoTotal = 0;
 
 
              QT = Q1 * Q2 * Q3 * Q4 * Q5 * Q6 * Q7 * Q8 * Q9 * Q10;
@@ -82,16 +82,17 @@ $(document).ready(function() {
             RespuestaV10 = (V10 == 1) ? "V": "" ;
 
 
-            RespuestaApuesta = '1)' + RespuestaL1 + RespuestaE1 + RespuestaV1 + ' - '+
-                               '2)' + RespuestaL2 + RespuestaE2 + RespuestaV2 + ' - '+
-                               '3)' + RespuestaL3 + RespuestaE3 + RespuestaV3 + ' - '+
-                               '4)' + RespuestaL4 + RespuestaE4 + RespuestaV4 + ' - '+
-                               '5)' + RespuestaL5 + RespuestaE5 + RespuestaV5 + ' - '+
-                               '6)' + RespuestaL6 + RespuestaE6 + RespuestaV6 + ' - '+
-                               '7)' + RespuestaL7 + RespuestaE7 + RespuestaV7 + ' - '+
-                               '8)' + RespuestaL8 + RespuestaE8 + RespuestaV8 + ' - '+
-                               '9)' + RespuestaL9 + RespuestaE9 + RespuestaV9 + ' - '+
-                               '10)' + RespuestaL10 + RespuestaE10 + RespuestaV10;
+            RespuestaApuesta = '' + RespuestaL1 + RespuestaE1 + RespuestaV1 + '%0A' +
+                               '' + RespuestaL2 + RespuestaE2 + RespuestaV2 + '%0A'+
+                               '' + RespuestaL3 + RespuestaE3 + RespuestaV3 + '%0A'+
+                               '' + RespuestaL4 + RespuestaE4 + RespuestaV4 + '%0A'+
+                               '' + RespuestaL5 + RespuestaE5 + RespuestaV5 + '%0A'+
+                               '' + RespuestaL6 + RespuestaE6 + RespuestaV6 + '%0A'+
+                               '' + RespuestaL7 + RespuestaE7 + RespuestaV7 + '%0A'+
+                               '' + RespuestaL8 + RespuestaE8 + RespuestaV8 + '%0A'+
+                               '' + RespuestaL9 + RespuestaE9 + RespuestaV9 + '%0A'+
+                               '' + RespuestaL10 + RespuestaE10 + RespuestaV10;
+
 
             RespuestaPartidos = {
                                Partido1 : RespuestaL1 + RespuestaE1 + RespuestaV1,
@@ -229,6 +230,7 @@ $("#enviarWhatsapp").click(function(){
 
     Nombre = $("#name").val();
 
+
     if(Nombre == '' || Nombre == null)
     {
         alert('Debes escribir un nombre');
@@ -242,7 +244,7 @@ $("#enviarWhatsapp").click(function(){
             // console.log(RespuestaApuesta);
             borrarLEV();
             var baseURL = 'https://api.whatsapp.com/send?phone=+525628121403&text='
-            window.open( baseURL + RespuestaApuesta + ' -> ' +Nombre,"_blank");
+            window.open( baseURL + 'Tu boleto de apuesta son:' + '%0A'+ ' '+ '%0A' + RespuestaApuesta + '%0A'+ ' '+ '%0A' + 'Participante: '+ Nombre +'%0A'+'Costo Total: $ '+ CostoTotal ,"_blank");
 
 
     }
