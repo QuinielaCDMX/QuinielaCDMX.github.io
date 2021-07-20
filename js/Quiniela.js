@@ -174,7 +174,7 @@ $(document).ready(function() {
             $("#Visitante9").removeClass("btn-primary");
             $("#Visitante10").removeClass("btn-primary");
             borrarQuiniela();
-
+            borrarLEV();
         })
 
 
