@@ -82,15 +82,15 @@ $(document).ready(function() {
             RespuestaV10 = (V10 == 1) ? "V": "" ;
 
 
-            RespuestaApuesta = RespuestaL1 + RespuestaE1 + RespuestaV1 + ' '+
-                               RespuestaL2 + RespuestaE2 + RespuestaV2 + ' '+
-                               RespuestaL3 + RespuestaE3 + RespuestaV3 + ' '+
-                               RespuestaL4 + RespuestaE4 + RespuestaV4 + ' '+
-                               RespuestaL5 + RespuestaE5 + RespuestaV5 + ' '+
-                               RespuestaL6 + RespuestaE6 + RespuestaV6 + ' '+
-                               RespuestaL7 + RespuestaE7 + RespuestaV7 + ' '+
-                               RespuestaL8 + RespuestaE8 + RespuestaV8 + ' '+
-                               RespuestaL9 + RespuestaE9 + RespuestaV9 + ' '+
+            RespuestaApuesta = RespuestaL1 + RespuestaE1 + RespuestaV1 + '|'+
+                               RespuestaL2 + RespuestaE2 + RespuestaV2 + '|'+
+                               RespuestaL3 + RespuestaE3 + RespuestaV3 + '|'+
+                               RespuestaL4 + RespuestaE4 + RespuestaV4 + '|'+
+                               RespuestaL5 + RespuestaE5 + RespuestaV5 + '|'+
+                               RespuestaL6 + RespuestaE6 + RespuestaV6 + '|'+
+                               RespuestaL7 + RespuestaE7 + RespuestaV7 + '|'+
+                               RespuestaL8 + RespuestaE8 + RespuestaV8 + '|'+
+                               RespuestaL9 + RespuestaE9 + RespuestaV9 + '|'+
                                RespuestaL10 + RespuestaE10 + RespuestaV10;
 
             RespuestaPartidos = {
@@ -112,17 +112,17 @@ $(document).ready(function() {
              $("#CostoTotal").html("<h4> Costo <b class='text-danger'> $"+ CostoTotal +"</b> </h4>");
 
 
-             console.log("Quiniela 1 = " + Q1);
-             console.log("Quiniela 2 = " + Q2);
-             console.log("Quiniela 3 = " + Q3);
-             console.log("Quiniela 4 = " + Q4);
-             console.log("Quiniela 5 = " + Q5);
-             console.log("Quiniela 6 = " + Q6);
-             console.log("Quiniela 7 = " + Q7);
-             console.log("Quiniela 8 = " + Q8);
-             console.log("Quiniela 9 = " + Q9);
-             console.log("Quiniela 10 = " + Q10);
-             console.log("Quiniela Total = " + QT);
+            //  console.log("Quiniela 1 = " + Q1);
+            //  console.log("Quiniela 2 = " + Q2);
+            //  console.log("Quiniela 3 = " + Q3);
+            //  console.log("Quiniela 4 = " + Q4);
+            //  console.log("Quiniela 5 = " + Q5);
+            //  console.log("Quiniela 6 = " + Q6);
+            //  console.log("Quiniela 7 = " + Q7);
+            //  console.log("Quiniela 8 = " + Q8);
+            //  console.log("Quiniela 9 = " + Q9);
+            //  console.log("Quiniela 10 = " + Q10);
+            //  console.log("Quiniela Total = " + QT);
 
         }
 
@@ -239,16 +239,16 @@ $("#enviarWhatsapp").click(function(){
 
 
             alert('Tu apuesta ha sido exitoso, por favor comunicas con un administrador para que le depositas.');
-            console.log(RespuestaApuesta);
+            // console.log(RespuestaApuesta);
             borrarLEV();
             var baseURL = 'https://api.whatsapp.com/send?phone=+525628121403&text='
-            window.open( baseURL + RespuestaApuesta + ' ' +Nombre,"_blank");
+            window.open( baseURL + RespuestaApuesta + ' -> ' +Nombre,"_blank");
 
 
     }
 
 
-    console.log(RespuestaApuesta);
+    // console.log(RespuestaApuesta);
 
 })
 
