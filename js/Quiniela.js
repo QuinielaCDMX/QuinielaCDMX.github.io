@@ -248,7 +248,7 @@ $("#enviarWhatsapp").click(function(){
             alert('Tu apuesta ha sido exitoso, por favor comunicas con un administrador para que le depositas.');
             console.log(RespuestaApuesta);
             borrarLEV();
-            var baseURL = 'https://api.whatsapp.com/send?phone=+525539644056&text='
+            var baseURL = 'https://api.whatsapp.com/send?phone=+525628121403&text='
             window.open( baseURL + RespuestaApuesta + ' ' +Nombre,"_blank");
 
 
