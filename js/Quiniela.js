@@ -82,16 +82,16 @@ $(document).ready(function() {
             RespuestaV10 = (V10 == 1) ? "V": "" ;
 
 
-            RespuestaApuesta = RespuestaL1 + RespuestaE1 + RespuestaV1 + '|'+
-                               RespuestaL2 + RespuestaE2 + RespuestaV2 + '|'+
-                               RespuestaL3 + RespuestaE3 + RespuestaV3 + '|'+
-                               RespuestaL4 + RespuestaE4 + RespuestaV4 + '|'+
-                               RespuestaL5 + RespuestaE5 + RespuestaV5 + '|'+
-                               RespuestaL6 + RespuestaE6 + RespuestaV6 + '|'+
-                               RespuestaL7 + RespuestaE7 + RespuestaV7 + '|'+
-                               RespuestaL8 + RespuestaE8 + RespuestaV8 + '|'+
-                               RespuestaL9 + RespuestaE9 + RespuestaV9 + '|'+
-                               RespuestaL10 + RespuestaE10 + RespuestaV10;
+            RespuestaApuesta = '1)' + RespuestaL1 + RespuestaE1 + RespuestaV1 + ' - '+
+                               '2)' + RespuestaL2 + RespuestaE2 + RespuestaV2 + ' - '+
+                               '3)' + RespuestaL3 + RespuestaE3 + RespuestaV3 + ' - '+
+                               '4)' + RespuestaL4 + RespuestaE4 + RespuestaV4 + ' - '+
+                               '5)' + RespuestaL5 + RespuestaE5 + RespuestaV5 + ' - '+
+                               '6)' + RespuestaL6 + RespuestaE6 + RespuestaV6 + ' - '+
+                               '7)' + RespuestaL7 + RespuestaE7 + RespuestaV7 + ' - '+
+                               '8)' + RespuestaL8 + RespuestaE8 + RespuestaV8 + ' - '+
+                               '9)' + RespuestaL9 + RespuestaE9 + RespuestaV9 + ' - '+
+                               '10)' + RespuestaL10 + RespuestaE10 + RespuestaV10;
 
             RespuestaPartidos = {
                                Partido1 : RespuestaL1 + RespuestaE1 + RespuestaV1,
