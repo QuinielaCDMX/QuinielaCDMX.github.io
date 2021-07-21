@@ -16,7 +16,6 @@ $(document).ready(function() {
         L5=0,E5=0,V5=0,L6=0,E6=0,V6=0,L7=0,E7=0,V7=0,L8=0,E8=0,V8=0, L9=0, E9=0, V9=0, L10=0, E10=0, V10=0,
         Q1=0, Q2=0, Q3=0, Q4=0, Q5=0, Q6=0, Q7=0, Q8=0, Q9=0, Q10=0, Dobles=0, Triples=0 , Unicos=0;
 
-    QArreglo[] = [];
 
         var RespuestaApuesta = '', Nombre='', CostoTotal=0;
 
@@ -235,31 +234,32 @@ $(document).ready(function() {
 $("#enviarWhatsapp").click(function(){
 
     
-    (Q1==3) ? Triples += 1 : (Q1==2) ? Dobles +=1 : Unicos+1;
+    // (Q1==3) ? Triples += 1 : (Q1==2) ? Dobles +=1 : Unicos+1;
 
-    console.log('Triples: ' + Triples + ' Dobles: ' + Dobles + ' Unicos: ' + Unicos)
-
-
-    // Nombre = $("#name").val();
+    // console.log('Triples: ' + Triples + ' Dobles: ' + Dobles + ' Unicos: ' + Unicos)
 
 
-    // if(Nombre == '' || Nombre == null)
-    // {
-    //     alert('Debes escribir un nombre');
-    // } else if(QT == 0 || QT == '')
-    // {
-    //     alert('Debes llenar las casillas');
-    // } else {
+    Nombre = $("#name").val();
 
 
-    //         alert('Tu apuesta ha sido exitoso, por favor comunicas con un administrador para que le depositas.');
-    //         // console.log(RespuestaApuesta);
-    //         borrarLEV();
-    //         var baseURL = 'https://api.whatsapp.com/send?phone=+525628121403&text='
-    //         window.open( baseURL + 'Tu boleto de apuesta son:' + '%0A'+ ' '+ '%0A' + RespuestaApuesta + '%0A'+ ' '+ '%0A' + 'Participante: '+ Nombre +'%0A'+'Costo Total: $ '+ CostoTotal ,"_blank");
+    if(Nombre == '' || Nombre == null)
+    {
+        alert('Debes escribir un nombre');
+    } else if(QT == 0 || QT == '')
+    {
+        alert('Debes llenar las casillas');
+    } else {
 
+        if(confirm('¿Estas seguro que deseas realizar una(s) apuesta(s) ?'))
+        {
+            alert('Tu apuesta ha sido exitoso, por favor comunicas con un administrador para que le depositas.');
+            // console.log(RespuestaApuesta);
+            borrarLEV();
+            var baseURL = 'https://api.whatsapp.com/send?phone=+525628121403&text='
+            window.open( baseURL + 'Tu boleto de apuesta son:' + '%0A'+ ' '+ '%0A' + RespuestaApuesta + '%0A'+ ' '+ '%0A' + 'Participante: '+ Nombre +'%0A'+'Costo Total: $ '+ CostoTotal ,"_blank");
+        }
 
-    // }
+    }
 
 
     // console.log(RespuestaApuesta);
