@@ -40,8 +40,14 @@ $(document).ready(function() {
              QArreglo = [Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, Q10];
 
 
+            if(QT < 32)
+            {
+                CostoTotal = QT * 15;
+            }
+            else {
+                CostoTotal = QT * 10;
+            }
 
-             CostoTotal = QT * 15;
 
 
             RespuestaL1 = (L1 == 1) ? "L": "";
@@ -116,7 +122,15 @@ $(document).ready(function() {
 
              $("#QuinielaTotal").html("<h4><b class='text-danger'>"+ QT +"</b> Quiniela(s)</h4>");
 
-             $("#CostoTotal").html("<h4> Costo <b class='text-danger'> $"+ CostoTotal +"</b> </h4>");
+            if(CostoTotal<320)
+            {
+                $("#CostoTotal").html("<h4> Costo <b class='text-danger'> $"+ CostoTotal +"</b> </h4>");
+
+            }else {
+                $("#CostoTotal").html("<h4> Costo <b class='text-danger'> $"+ CostoTotal +' (Promoción)'+"</b> </h4>");
+
+            }
+
 
 
             //  console.log("Quiniela 1 = " + Q1);
