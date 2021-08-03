@@ -122,7 +122,7 @@ $(document).ready(function() {
 
              $("#QuinielaTotal").html("<h4><b class='text-danger'>"+ QT +"</b> Quiniela(s)</h4>");
 
-            if(CostoTotal<320)
+            if(QT<32)
             {
                 $("#CostoTotal").html("<h4> Costo <b class='text-danger'> $"+ CostoTotal +"</b> </h4>");
 
