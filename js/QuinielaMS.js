@@ -42,10 +42,10 @@ $(document).ready(function() {
 
             if(QT < 6)
             {
-                CostoTotal = QT * 20;
+                CostoTotal = QT * 15;
             }
             else {
-                CostoTotal = QT * 15;
+                CostoTotal = QT * 20;
             }
 
 
